@@ -19,8 +19,7 @@ pollutantmean <- function(directory = "specdata", pollutant, id = 1:332) {
     #loops through the files, rbinding them together 
     dat <- rbind(dat, read.csv(files_list[i]))
   }
+  
   mean(dat[,pollutant], na.rm = T)
-  #dat_subset <- dat[which(dat[, "Day"] == day),]  #subsets the rows that match the 'day' argument
-  #median(dat_subset[, "Weight"], na.rm=TRUE)      #identifies the median weight 
-  #while stripping out the NAs
+  
 }     
